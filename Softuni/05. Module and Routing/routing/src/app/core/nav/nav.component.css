@@ -1,0 +1,19 @@
+.nav-btn {
+    background-color: rgb(24, 104, 196);
+    padding: 0.8em 0.5em;
+    border-radius: 15px;
+    color: black;
+}
+
+.nav-btn:hover {
+    background-color: rgb(15, 58, 107);
+    cursor: pointer;
+    color: white;
+    transition: all 0.3s;
+}
+
+.nav-container {
+    display: flex;
+    gap: 5px;
+    list-style: none;
+}
