@@ -24,6 +24,9 @@ export class HighlightDirective implements OnInit, OnDestroy{
 
     const mouseEnterEvent = this.renderer.listen(this.elRef.nativeElement, 'mouseenter', this.mouseEnterHandler.bind(this))
     const mouseLeaveEvent = this.renderer.listen(this.elRef.nativeElement, 'mouseleave', this.mouseLeaveHandler.bind(this))
+  
+    this.unsubFromEventsArray.push(mouseEnterEvent);
+    this.unsubFromEventsArray.push(mouseLeaveEvent);
   }
 
   
@@ -39,5 +42,10 @@ export class HighlightDirective implements OnInit, OnDestroy{
   
   ngOnDestroy(): void {
     console.log('On Destroy invoked!')
+    console.log(this.unsubFromEventsArray)
+
+    this.unsubFromEventsArray.forEach((eventFn) => {
+      eventFn()
+    })
   }
 }
