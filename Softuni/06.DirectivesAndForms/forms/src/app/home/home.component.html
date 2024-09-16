@@ -1,7 +1,13 @@
 <h3 appHighlight>Hello, Directives</h3>
-<p>Lorem ipsum dolor mi amet </p>
 
 <hr />
+<div appMyRouterLink="/login" class='btn'>Go to login page</div>
+<div appMyRouterLink="/register" class='btn'>Go to register page</div>
+<hr />
 
-<div routerLink="/login">Go to login page</div>
-<div routerLink="/register">Go to register page</div>
+<div *ngIf="false">Simple Divche 1</div>
+
+
+<button (click)="toggle()">Toggle</button>
+<!-- Custom Directives -->
+ <div *MyStructuralDirective="isShown"> Structural Directive - Usage 1</div>

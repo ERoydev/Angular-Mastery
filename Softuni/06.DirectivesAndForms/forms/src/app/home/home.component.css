@@ -5,3 +5,15 @@
     font-weight: 700;
     cursor: pointer;
 }
+
+.btn {
+    background-color: aqua;
+    padding: 0.5em 1em;
+    display: inline;
+}
+
+.btn:hover {
+    color: white;
+    background-color: rgb(18, 19, 19);
+    cursor: pointer;
+}
